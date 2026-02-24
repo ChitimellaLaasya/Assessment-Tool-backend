@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Combined Assessment Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      html,
+      body {
+        background-color: white;
+        color: black;
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 2rem;
+        background: white;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        page-break-after: always; /* ensure page breaks after each page */
+      }
+
+      h2,
+      h3,
+      h4 {
+        font-weight: bold;
+        text-decoration: underline;
+        page-break-inside: avoid;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        page-break-inside: avoid;
+      }
+
+      .label {
+        font-weight: bold;
+      }
+
+      .section-title {
+        font-weight: bold;
+        text-decoration: underline;
+        margin-top: 30px;
+        page-break-inside: avoid;
+      }
+
+      ul,
+      ol {
+        margin-top: 10px;
+        padding-left: 20px;
+        page-break-inside: avoid;
+      }
+
+      li {
+        margin-bottom: 6px;
+        page-break-inside: avoid;
+      }
+
+      .table-container {
+        margin: 20px 0;
+        overflow-x: auto;
+        page-break-inside: avoid;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      }
+
+      thead {
+        display: table-header-group; /* Repeat header if table splits */
+      }
+
+      tbody {
+        display: table-row-group;
+      }
+
+      tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .note {
+        font-size: 13px;
+        line-height: 1.6;
+        page-break-inside: avoid;
+      }
+
+      canvas {
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        page-break-inside: avoid;
+      }
+
+      .chart-container {
+        max-width: 100%;
+        margin-top: 30px;
+        page-break-inside: avoid;
+      }
+
+      .page-break-inside-avoid {
+        page-break-inside: avoid;
+      }
+
+      @media print {
+        body {
+          background-color: white;
+          color: black;
+        }
+        .page {
+          box-shadow: none;
+          border: none;
+        }
+        canvas {
+          background-color: white !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page 1: q.html -->
+    <div class="page">
+      <h2>Intellectual and Educational Assessment Report</h2>
+      <div class="row">
+        <div><span class="label">Name:</span> «Name»</div>
+        <div><span class="label">Gender:</span> «Gender»</div>
+      </div>
+      <div class="row">
+        <div><span class="label">Date of Testing:</span> «Date_of_Testing»</div>
+        <div><span class="label">Class:</span> «Class»</div>
+      </div>
+      <div class="row">
+        <div><span class="label">Date of Birth:</span> «Date_of_Birth»</div>
+        <div><span class="label">Informant:</span> «Informant»</div>
+      </div>
+      <p>
+        «Name», «Age» old «Gender» child was referred by school for intellectual
+        and educational assessment. «he_she» is studying «Class» standard, in
+        «School_Name». This assessment was done with the purpose of evaluating
+        «his_her» current level and to develop effective intervention program
+        for the child.
+      </p>
+      <p class="section-title">Background Data and Observations</p>
+      <p>
+        «Name» was cooperative for assessment. Behavioral observation reveals
+        that «he_she» was attentive and followed the test instructions.
+      </p>
+      <p class="section-title">Tests Administered</p>
+      <p>
+        In order to assess «his_her» Intellectual performance following test was
+        administered:
+      </p>
+      <ul>
+        <li>«Tests_Administered»</li>
+        <li>«Other_Test»</li>
+      </ul>
+      <p class="section-title">Educational Assessment</p>
+      <ol>
+        <li>Sattler’s Informal Writing Assessment</li>
+        <li>Schnell’s Reading test</li>
+        <li>Schnell’s Spelling Test</li>
+        <li>NIMHANS SLD index- Arithmetic test</li>
+        <li>Social Savvy</li>
+      </ol>
+    </div>
+
+    <!-- Page 2: q.html continued (Test Findings) -->
+    <div class="page">
+      <h3>Test Findings</h3>
+      <h4>I. Intellectual Assessment</h4>
+      <p>
+        On MISIC, «his_her»
+        <span data-source="Verbal_quotient" data-score="Verbal_quotient"
+          >«Verbal_quotient»</span
+        >
+        is which suggests «suggests».
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Verbal Tests</th>
+              <th>Verbal Quotient</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Information</td>
+              <td data-score="Information">«Information»</td>
+            </tr>
+            <tr>
+              <td>Comprehension</td>
+              <td data-score="Comprehension">«Comprehension»</td>
+            </tr>
+            <tr>
+              <td>Arithmetic</td>
+              <td data-score="Arithmetic">«Arithmetic»</td>
+            </tr>
+            <tr>
+              <td>Similarities</td>
+              <td data-score="Similarities">«Similarities»</td>
+            </tr>
+            <tr>
+              <td>«DigitVocabLabel»</td>
+              <td data-score="DigitVocabScore">«DigitVocabScore»</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        (The Average level of intelligence for the reference of above table is
+        90–109; Borderline level of impairment is 70–79; Low average level of
+        Intelligence is 80–89; High average level of intelligence is 110–119;
+        superior level of intelligence is 120–129; superior level of
+        intelligence is above 130)
+      </p>
+      <div class="chart-container">
+        <canvas id="verbalChart" width="600" height="400"></canvas>
+      </div>
+    </div>
+
+    <!-- Page 3: mm.html (Verbal Subtest Interpretation) -->
+    <div class="page">
+      <div class="section-title">
+        Information - fund of general knowledge; long-term memory; recall
+      </div>
+      <p>
+        The Information subtest reflects two factors in the child's development
+        of language and knowledge: 1) The richness of the child's verbal
+        environment during «his_her» development is reflected in the fund of
+        knowledge. 2) The ability to store that knowledge in long-term memory,
+        recall it, and verbally express it is an individual ability that is
+        measured by the Information subtest.<br />
+        <span class="highlight"
+          >On this subtest «Name» has scored «Information_Level» of
+          performance.</span
+        >
+      </p>
+      <div class="section-title">
+        Comprehension - Understanding social rules and ethics; common sense and
+        judgement
+      </div>
+      <p>
+        The Comprehension subtest is based on social comprehension, a skill that
+        is deficient in many LD and ADHD children. The social understanding that
+        underlies the Comprehension subtest is greatly influenced by
+        environment. Ethical judgment may be lacking for a variety of reasons -
+        intellectual, environmental, and emotional. For children with
+        significantly weak comprehension subtest scores, direct instruction in
+        social skills may be required.
+        <span class="highlight"
+          >On this subtest «Name» has scored «Comprehension_Level» of
+          performance.</span
+        >
+      </p>
+      <div class="section-title">
+        Arithmetic - Numerical reasoning; attention and concentration
+      </div>
+      <p>
+        The numerical tasks of the Arithmetic subtest are worked out "in the
+        child's head". «he_she» must have the ability to attend to the verbally
+        presented problem and concentrate on working out the answer in «his_her»
+        short-term memory. The Arithmetic subtest requires a level of freedom
+        from distractibility that is considered a factor in overall
+        intelligence. Performance on Arithmetic also requires a mastery of the
+        mathematical operations required by each item, and therefore reveals
+        information on the child's achievement in arithmetic learning.
+        <span class="highlight"
+          >On this subtest «Name» has scored «Arithmetic_Level» of
+          performance.</span
+        >
+      </p>
+    </div>
+
+    <!-- Page 4: nn.html (Verbal and Performance Subtest Interpretation) -->
+    <div class="page">
+      <div class="section-title">
+        Similarities - Verbal categories and concepts; abstract verbal reasoning
+      </div>
+      <p>
+        In order to store language and information in long-term memory, humans
+        use a process of categorization and conceptualization that develops from
+        the concrete to the abstract.<br />
+        The Similarities subtest captures the child's ability to mentally
+        process verbal information, categorizing and conceptualizing information
+        in the long-term memory store.<br />
+        Over the course of the child's development, their conceptual skills
+        progress from concrete to abstract reasoning, a process that is
+        reflected in the Similarities subtest.<br />
+        <span class="highlight"
+          >On this subtest «Name» has scored «Similarities_Level» of
+          performance.</span
+        >
+      </p>
+      <div class="section-title">Digit Span</div>
+      <p>
+        For digit span forwards, the child repeats numbers in the same order as
+        presented aloud by the examiner. For digit span backward, the child
+        repeats the numbers in reverse order of that presented by the examiner.
+        It is included in an assessment of the factor known as Freedom from
+        Distractibility. An examiner may use the Digit Span subtest to suggest a
+        possible ADD/ADHD diagnosis, particularly if it correlates with the
+        other Freedom from Distractibility subtests - Arithmetic and Coding.
+        High Digit Span scores suggest a superior ability to concentrate and
+        memorize orally presented information.
+        <span class="highlight"
+          >On this subtest «Name» has scored «Digit_Span_Level» of
+          performance.</span
+        >
+      </p>
+      <p>
+        «his_her» performance quotient on the same test is
+        <span
+          class="highlight"
+          data-source="performance_quotient"
+          data-score="performance_quotient"
+          >«performance_quotient»</span
+        >
+        which shows
+        <span class="highlight">«performance_quotient_Level»</span> range of
+        intelligence on performance scale.
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Performance Tests</th>
+              <th>Performance Quotient</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Picture Completion</td>
+              <td data-score="Picture_Completion">«Picture_Completion»</td>
+            </tr>
+            <tr>
+              <td>Block Design</td>
+              <td data-score="Block_Design">«Block_Design»</td>
+            </tr>
+            <tr>
+              <td>Object Assembly</td>
+              <td data-score="Object_Assembly">«Object_Assembly»</td>
+            </tr>
+            <tr>
+              <td>Coding</td>
+              <td data-score="Coding">«Coding»</td>
+            </tr>
+            <tr>
+              <td>Mazes</td>
+              <td data-score="Mazes">«Mazes»</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        (The Borderline level of impairment for the reference of the above table
+        is 70–79; Average level of intelligence is 90–109; Extremely low (level
+        of impairment) is 60 and below; Low average level of intelligence is
+        80–89; High average level of intelligence is 110–119)
+      </p>
+    </div>
+
+    <!-- Page 5: oo.html (Performance Subtest Interpretation) -->
+    <div class="page">
+      <div class="chart-container">
+        <canvas id="performanceChart" width="600" height="400"></canvas>
+      </div>
+      <div>
+        <br /><br />
+        <div class="section-title">
+          <u
+            >Picture Completion - Visual discrimination; attention to visual
+            detail</u
+          >
+        </div>
+        <p class="subtest-description">
+          The skill reflected by the Picture Completion subtest is not visual
+          acuity; it is visual discrimination. The child must look at the visual
+          whole presented and analyze its parts to identify what is missing. A
+          relatively simple task, poor performance in an LD child may be related
+          to visual-perceptual difficulties or environmental awareness.
+          <span class="highlight"
+            >On this subtest «Name» has scored «Picture_Completion_Level» of
+            performance.</span
+          >
+        </p>
+        <div class="section-title">
+          <u
+            >Block Design - Abstract visual-perceptual ability; spatial and
+            nonverbal problem-solving</u
+          >
+        </div>
+        <p class="subtest-description">
+          A pure test of perceptual intelligence, Block Design is the only
+          perceptual subtest that factors heavily with overall intelligence.
+          Block Design will give you a good clue to innate intellectual
+          potential. However, Block Design is a visual-motor task and poor
+          performance may be developmental or related to a motor deficiency.
+          <span class="highlight"
+            >On this subtest «Name» has scored «Block_Design_Level» of
+            performance.</span
+          >
+        </p>
+        <div class="section-title">
+          <u
+            >Object Assembly - Visual analysis and construction of a whole from
+            its parts</u
+          >
+        </div>
+        <p class="subtest-description">
+          The Object Assembly subtest score reflects the visual-motor skills of
+          puzzle construction. The child must fit parts within time constraints.
+          <span class="highlight"
+            >On this subtest «Name» has scored «Object_Assembly_Level» of
+            performance.</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Page 6: pp.html (Performance Subtest Interpretation and Full Scale IQ) -->
+    <div class="page">
+      <div class="section-title">
+        Coding - Visual motor coordination; speed; concentration
+      </div>
+      <p>
+        This is an interesting performance subtest that measures visual motor
+        skill. Coding gives clues to basic deficiencies in visual motor
+        performance needed for writing. Good short-term memory improves
+        performance on coding. It also factors with freedom from distractibility
+        and the ability to concentrate to accomplish a visual motor task within
+        time constraints.
+        <span class="highlight"
+          >On this subtest «Name» has scored «Coding_Level» of
+          performance.</span
+        >
+      </p>
+      <div class="section-title">Mazes- Mental Planning Skills</div>
+      <p>
+        Mazes show the ability of mental planning, insight and attention to
+        instructions of the child. It is a good measure of visuo-motor
+        coordination with accuracy and speed.
+        <span class="highlight"
+          >On this subtest «Name» has scored «Mazes_Level» of performance.</span
+        >
+      </p>
+      <p>
+        Overall <span class="highlight">«Name»</span> full scale Intelligence
+        quotient is
+        <span class="highlight" data-score="Overall_Quotient"
+          >«Overall_Quotient»</span
+        >
+        which is <span class="highlight">«Overall_Level»</span>. However,
+        «his_her» performance abilities are better compared to «his_her» verbal
+        abilities. «his_her» verbal quotient is
+        <span class="highlight">«Points»</span> points below than «his_her»
+        verbal quotient. «he_she» struggled with numerical reasoning skill,
+        social skills, visual perception skills and visual motor coordination.
+      </p>
+      <div class="chart-container">
+        <canvas id="scoreChart"></canvas>
+      </div>
+    </div>
+
+    <div class="page">
+      <h3 style="text-align: center; text-decoration: underline">
+        Educational Assessment Report
+      </h3>
+
+      <ul>
+        <li>
+          <b><u>Sattler’s Informal Writing Assessment Tool</u></b>
+        </li>
+      </ul>
+
+      <p>
+        Following rating is based on a writing sample taken from the child
+        during testing time on an un-ruled paper.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Spacing on the page</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Spacing of the sentences</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Spacing of words</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Spacing of letters</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Slant</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Letter Formation</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Pressure on paper</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Pencil Grip</td>
+              <td></td>
+              <td></td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><i>(Penmanship 1 – It's illegible, 5 – Best)</i></p>
+
+      <p>
+        Aadhvik Mandala handwriting shows, main error in spacing on the page,
+        sentence, words and letters. «his_her» handwriting is cursive.
+      </p>
+
+      <ul>
+        <li>
+          <b><u>Schonell’s Graded Word Reading Test</u></b>
+        </li>
+      </ul>
+      <p>
+        On Schonell’s Reading test, «his_her» reading age was found to be 1.
+        This score is <b>below</b> than «his_her» chronological age (10).
+        <b>This discrepancy shows no difficulty in reading skills.</b>
+      </p>
+
+      <ul>
+        <li>
+          <b><u>Schnell’s Spelling Test-B</u></b>
+        </li>
+      </ul>
+      <p>
+        On Schonell’s spelling test «his_her» Spelling age was calculated is 2.
+        This score is <b>above</b> than «his_her» chronological age (10).
+        <b>This discrepancy shows no difficulty in spelling skills.</b>
+      </p>
+    </div>
+
+    <div class="page">
+      <h4>
+        <b><u>NIMHANS SLD Index - Arithmetic test</u></b>
+      </h4>
+      <p>
+        This test is used for evaluating basic math skills of a school going
+        child. In this simple math sums are given to check basic addition,
+        subtraction, multiplication and division. Then the test provided graded
+        level of all four math operations. At the end child shall attempt
+        fractions and all operations of fractions.
+        <span class="highlight"
+          >«Name» has difficulty with basic division and graded level of all
+          four math operations and all fraction operations.</span
+        >
+      </p>
+
+      <h4>
+        <b><u>Summary</u></b>
+      </h4>
+      <p>
+        From the test results, interview and observation it can be concluded
+        that <span class="highlight">«Name»</span> is having
+        <span class="highlight">«Summery»</span>. It is observable from the
+        profile of the test that «he_she» might have difficulty in the areas of
+        reading, spelling and mathematics. The profile and the observation data
+        match with profile of <span class="highlight">«Final_Level»</span>.
+      </p>
+
+      <h4>
+        <b><u>Recommendations</u></b>
+      </h4>
+      <p>
+        From the assessments it is recommended
+        <span class="highlight">«Name»</span> could benefit from:
+      </p>
+      <ul>
+        <li>
+          Parental counseling regarding the understanding of child’s diagnosis
+          and results of the tests. It will help the parents to accept the child
+          and help «him_her» in a more appropriate way.
+        </li>
+        <li>
+          Training to improve «his_her» long-term memory, understanding social
+          rules, numerical reasoning skill, working memory, problem solving,
+          visual analysis, speed, concentration and planning.
+        </li>
+        <li>
+          Academic planning based on assessment results. Math is the major
+          concern.
+        </li>
+        <li>
+          Individual counseling to help «him_her» to cope up with academic and
+          other stressful situations.
+        </li>
+        <li>
+          Remedial training to improve «his_her» math and handwriting skill.
+        </li>
+        <li>
+          An orientation to the teachers and discussion to make decision on kind
+          of accommodations in classroom and evaluation in order to show
+          «his_her» best potential.
+        </li>
+        <li>
+          Constant feedback shall be given to the remedial therapist (school
+          based).
+        </li>
+      </ul>
+    </div>
+    <div class="page">
+      <ul>
+        <li><span class="highlight">«Recomodations»</span></li>
+        <li><span class="highlight">«Recomodations_2»</span></li>
+        <li><span class="highlight">«Recomodations_3»</span></li>
+      </ul>
+
+      <p style="margin-top: 30px">
+        Thank you so much for providing support to
+        <span class="highlight">«Name»</span>. Please do the needful to enable
+        the child to show «his_her» best potential.
+      </p>
+    </div>
+
+    <!-- Scripts for charts (verbalChart, performanceChart, and scoreChart) -->
+    <script>
+      function getScore(label) {
+        const cell = document.querySelector(`[data-score="${label}"]`);
+        if (!cell) return 0;
+        const text = cell.textContent.trim();
+        if (
+          text === "N/A" ||
+          text === "" ||
+          text === "undefined" ||
+          text === "null"
+        )
+          return 0;
+        const value = parseFloat(text);
+        return isNaN(value) ? 0 : value;
+      }
+
+      // Chart for Verbal Tests (from q.html)
+      const ctxVerbal = document
+        .getElementById("verbalChart")
+        ?.getContext("2d");
+      if (ctxVerbal) {
+        const baseLabels = [
+          "Information",
+          "Comprehension",
+          "Arithmetic",
+          "Similarities",
+        ];
+        const baseData = baseLabels.map((label) => getScore(label));
+
+        // Determine whether to include Vocabulary or Digit Span (from the dynamic row)
+        let extraLabel = null;
+        let extraScore = 0;
+        const scoreCell = document.querySelector(
+          '[data-score="DigitVocabScore"]'
+        );
+        const rawLabel = scoreCell
+          ? scoreCell.parentElement.children[0].textContent.trim()
+          : "";
+        const vocabScore = getScore("DigitVocabScore");
+
+        if (rawLabel && rawLabel.toLowerCase() !== "null") {
+          extraLabel = rawLabel;
+          extraScore = vocabScore; // include even if 0
+        }
+
+        const labels = extraLabel ? [...baseLabels, extraLabel] : baseLabels;
+        const data = extraLabel ? [...baseData, extraScore] : baseData;
+
+        new Chart(ctxVerbal, {
+          type: "bar",
+          data: {
+            labels,
+            datasets: [
+              {
+                label: "Verbal intelligence profile on MISIC",
+                data,
+                backgroundColor: "rgba(30, 144, 255, 0.8)",
+                borderRadius: 5,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 140,
+              },
+            },
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: "Verbal intelligence profile on MISIC",
+              },
+              tooltip: {
+                backgroundColor: "#1e1e1e",
+                titleColor: "#fff",
+                bodyColor: "#fff",
+              },
+            },
+          },
+        });
+      }
+      // Chart for Performance Tests (from oo.html)
+      const ctxPerformance = document
+        .getElementById("performanceChart")
+        ?.getContext("2d");
+      if (ctxPerformance) {
+        const perfKeys = [
+          "Picture_Completion",
+          "Block_Design",
+          "Object_Assembly",
+          "Coding",
+          "Mazes",
+        ];
+        const perfData = perfKeys.map((label) => getScore(label));
+        new Chart(ctxPerformance, {
+          type: "bar",
+          data: {
+            labels: [
+              "Picture Completion",
+              "Block Design",
+              "Object Assembly",
+              "Coding",
+              "Mazes",
+            ],
+            datasets: [
+              {
+                label: "performance intelligence on MISIC",
+                data: perfData,
+                backgroundColor: "rgba(30, 144, 255, 0.8)",
+                borderRadius: 5,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 180,
+              },
+            },
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: "performance intelligence on MISIC",
+              },
+              tooltip: {
+                backgroundColor: "#1e1e1e",
+                titleColor: "#fff",
+                bodyColor: "#fff",
+              },
+            },
+          },
+        });
+      }
+      // Chart for Full Scale IQ (from pp.html)
+      const ctxScore = document.getElementById("scoreChart")?.getContext("2d");
+      if (ctxScore) {
+        const verbalScore = getScore("Verbal_quotient");
+        const performanceScore = getScore("performance_quotient");
+        const fullIQ = getScore("Overall_Quotient");
+        console.log("Chart Debug - Verbal Score:", verbalScore);
+        console.log("Chart Debug - Performance Score:", performanceScore);
+        console.log("Chart Debug - Full IQ:", fullIQ);
+
+        new Chart(ctxScore, {
+          type: "bar",
+          data: {
+            labels: ["Verbal scale", "Performance scale", "FullIQ"],
+            datasets: [
+              {
+                label: "MISIC profile score",
+                data: [verbalScore, performanceScore, fullIQ],
+                backgroundColor: "#4A90E2",
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 140,
+                title: {
+                  stepSize: 0.5,
+                },
+                title: {
+                  display: true,
+                  text: "Score",
+                },
+              },
+            },
+            plugins: {
+              legend: {
+                display: false,
+              },
+              title: {
+                display: true,
+                text: "MISIC profile score",
+              },
+            },
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
